@@ -1,0 +1,49 @@
+/* -- Color palette and font for site --*/
+;root {
+    --dark-bg: #150933;
+    --Light-bg: #e6e6ee;
+    --Primary: #d69df2;
+    --secondary: #d13b75;
+    --edge-margin: 60px;
+    --global-margin: 5%
+}
+
+* {font-family: 'Times New Roman', Times, serif,sans-serif;
+}
+
+/* Header and nav */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    Padding-top: 1%;
+    background-color: var(--dark-bg);
+    color: var(--Primary)
+}
+
+header h1 {
+    margin: 0 10px 0 calc(var(--edge-margin)*1.2);
+    padding: 5px;
+    color: var(--dark-bg);
+    font-size: 45px;
+    z-index: 1; /* -- position h1 above main div -- */
+}
+
+header h1::before {
+    background-image: url('../Photos/me\ .jpg');
+    background-size: 45px 45px;
+    display: inline-block;
+    width: 45px;
+    height:45px;
+    position:absolute;
+    left: 3%;
+    content:"";
+}
+
+header #h1-me {
+    position: relative;
+    left: -1%;
+    background-color: var(--Primary)
+}
