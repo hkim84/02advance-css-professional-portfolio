@@ -1,11 +1,11 @@
 /* -- Color palette and font for site --*/
-;root {
+:root {
     --dark-bg: #150933;
     --Light-bg: #e6e6ee;
     --Primary: #d69df2;
     --secondary: #d13b75;
     --edge-margin: 60px;
-    --global-margin: 5%
+    --global-margin: 5%;
 }
 
 * {font-family: 'Times New Roman', Times, serif,sans-serif;
@@ -17,10 +17,27 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2%;
-    Padding-top: 1%;
+    padding: 1%;
+    Padding-top: .05%;
     background-color: var(--dark-bg);
     color: var(--Primary)
+}
+
+header h1::before {
+    background-image: url('../Photos/me\ .jpg');
+    background-size: 45px 45px;
+    display: inline-block;
+    width: 45px;
+    height:45px;
+    position:absolute;
+    left: 2.5%;
+    content:"";
+}
+
+header #h1-me {
+    position: relative;
+    left: -1%;
+    background-color: var(--Primary)
 }
 
 header h1 {
@@ -31,19 +48,20 @@ header h1 {
     z-index: 1; /* -- position h1 above main div -- */
 }
 
-header h1::before {
-    background-image: url('../Photos/me\ .jpg');
-    background-size: 45px 45px;
-    display: inline-block;
-    width: 45px;
-    height:45px;
-    position:absolute;
-    left: 3%;
-    content:"";
+nav {
+    display: block;
+    margin-right: var(--edge-margin);
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
 }
 
-header #h1-me {
-    position: relative;
-    left: -1%;
-    background-color: var(--Primary)
+nav a {
+    padding: 3px 9px;
+    border-bottom: 4px solid var(--Primary);
+    margin: 0 3px;
+    color: var(--primary);
+    text-decoration: none;
+
 }
