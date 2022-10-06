@@ -41,7 +41,7 @@ header h1::before {
 
 header #h1-me {
     position: relative;
-    left: -1%;
+    left: -.5%;
     background-color: var(--Primary)
 }
 
@@ -87,6 +87,11 @@ nav a {
     color: var(--dark-bg);
     font-size: 25px;
     display: flex;
-    flex-direction: column-reverse}
+    flex-direction: column-reverse;
+}
+
+/*Main section*/
+
+
 
 
