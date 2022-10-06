@@ -134,23 +134,64 @@ main section h2 {
     border: 5px solid va(--primary);
 }
 
+.placeboard {
+    z-index: 2;
+    position: absolute;
+    background-color: var(primary);
+    left: -2px;
+    bottom: 16px;
+    padding: 8px;
+}
+
+.placeboard h3 {
+    padding: 5px 0;
+    color: var(--dark-bg);
+    font-size: 25px;
+}
+
+.placeboard p {
+    color: var(--dark-bg);
+    font-size: 12px;
+}
+
+.box1 {
+    grid-area: box1;
+    background-image: url('../Photos/application\ where\ is\ it.jpg');
+    background-size: center;
+}
+
+.box2 {
+    grid-area: box2;
+    background-image: url('../Photos/application\ where\ is\ it.jpg');
+    background-size: cover;
+}
+
+.box3 {
+    grid-area: box3;
+    background-image: url('../Photos/application\ where\ is\ it.jpg');
+    background-size: cover;
+}
+
+
+.box4 {
+    grid-area: box4;
+    background-image: url('../Photos/application\ where\ is\ it.jpg');
+    background-size: cover;
+}
+
+.box5 {
+    grid-area: box5;
+    background-image: url('../Photos/application\ where\ is\ it.jpg');
+    background-size: cover;
+}
+
 .container {
     height: 80vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 5fr 2fr 2fr;
-    gird-template-areas:
+    grid-template-areas:
     "box1 box1"
     "box2 box3"
     "box4 box5";
 }
-
-
-
-
-
-
-
-
-
-
