@@ -1,11 +1,11 @@
-/* -- Color palette and font for site --*/
+/*Color palette and font for site*/
 :root {
-    --dark-bg: #1b0883;
-    --Light-bg: #e97ac7;
-    --Primary: #265785;
+    --primarydark-bg: #1b0883;
+    --primarylight-bg: #e97ac7;
+    --primary-main-main: #265785;
     --secondary: #9eb8b9;
-    --edge-margin: 60px;
-    --global-margin: 5%;
+    --border-margin: 60px;
+    --Main-margin: 5%;
 }
 
 * {
@@ -15,23 +15,23 @@
     box-sizing: border-box;
 }
 
-    /* body */
+    /*body*/
 
 body {
     min-height: 100%;
     line-height: 1;
 }
 
-    /* Header and nav */
+    /*Header and nav*/
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1%;
+    padding: .5%;
     Padding-top: .5%;
-    background-color: var(--dark-bg);
-    color: var(--Primary);
+    background-color: var(--primarydark-bg);
+    color: var(--primary-main-main);
 }
 
 header h1::before {
@@ -41,27 +41,27 @@ header h1::before {
     width: 50px;
     height:50px;
     position:absolute;
-    left: 2.5%;
+    left: 1%;
     content:"";
 }
 
 header #h1-me {
     position: relative;
-    left: -1%;
-    background-color: var(--Primary);
+    left: -.5%;
+    background-color: var(--primary-main-main);
 }
 
 header h1 {
     margin: 0 10px 0 72px;
     padding: 5px;
-    color: var(--dark-bg);
-    font-size: 45px;
-    z-index: 1; /* position h1 above main div  */
+    color: var(--primarydark-bg);
+    font-size: 50px;
+    z-index: 1; 
 }
 
 nav {
     display: block;
-    margin-right: var(--edge-margin);
+    margin-right: var(--border-margin);
     float: right;
     font-size: 20px;
     font-weight: bold;
@@ -70,13 +70,13 @@ nav {
 
 nav a {
     padding: 3px 9px;
-    border-bottom: 4px solid var(--Primary);
+    border-bottom: 4px solid var(--primary-main-main);
     margin: 0 3px;
-    color: var(--primary);
+    color: var(--primary-main-main);
     text-decoration: none;
 }
 
-/* background image */
+/*background image*/
 
 #topbg {
     width:100%;
@@ -90,7 +90,7 @@ nav a {
 
 #figh2 {
     padding: 10px;
-    color: var(--dark-bg);
+    color: var(--primarydark-bg);
     font-size: 25px;
     display: flex;
     flex-direction: column-reverse;
@@ -99,7 +99,7 @@ nav a {
 /*Main section*/
 
 main section {
-    margin: 2.5% 5%;
+    margin: 2.5% var(--Main-margin);
     height: 110vh;
     display: flex;
     flex-flow: row wrap;
@@ -127,68 +127,67 @@ main section h2 {
     color: var(--secondary);
 }
 
-/* Box content wilcard selector "my projects" */
+/*Grid*/
 
-*/ [class*="box"]{
-    position: relative;
+[class*="box"] {
+    position: relative; 
     margin: 5px;
-    border: 5px solid va(--primary);
+    border: 5px solid var(--primary-main);
 }
 
-.place{
+.bg { 
     position: absolute;
     z-index: 1;
-    left: 1.5vw;
+    left: -.5vw;
     top: -1.5%;
-    width: 102%;
-    height: 103;
-    background-color: #00396e;
+    width: 101%;
+    height: 103%;
+    background-color: var(--primarylight-bg);
     opacity: .5;
-    border: 4px solid var(--primary);
+    border: 4px solid var(--primary-main);
 }
 
-.place:hover{
+.bg:hover {
     opacity: 0;
 }
 
-.placeboard {
+.pjname {
     z-index: 2;
     position: absolute;
-    background-color: var(primary);
+    background-color: var(--primary-main);
     left: -2px;
     bottom: 16px;
     padding: 8px;
 }
 
-.placeboard h3 {
+.pjname h3 {
     padding: 5px 0;
-    color: var(--dark-bg);
+    color: var(--primarydark-bg);
     font-size: 25px;
 }
 
-.placeboard p {
-    color: var(--dark-bg);
+.pjname p {
+    color: var(--primarydark-bg);
     font-size: 12px;
 }
 
 .box1 {
     grid-area: box1;
     background-image: url('../Photos/application\ where\ is\ it.jpg');
-    background-size: cover;
+    background-size: center;
 }
 
 .box2 {
     grid-area: box2;
-    background-image: url('../Photos/application\ where\ is\ it.jpg');
+    background-image: url('..//Photos/application\ where\ is\ it.jpg');
     background-size: cover;
 }
 
 .box3 {
     grid-area: box3;
-    background-image: url('../Photos/application\ where\ is\ it.jpg');
+    background-image: url('..//Photos/application\ where\ is\ it.jpg');
     background-size: cover;
 }
-
 
 .box4 {
     grid-area: box4;
@@ -207,8 +206,132 @@ main section h2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 5fr 2fr 2fr;
-    grid-template-areas:
-    "box1 box1"
-    "box2 box3"
-    "box4 box5";
+    grid-template-areas: 
+      "box1 box1"
+      "box2 box3"
+      "box4 box5";
 }
+
+/*section nav*/
+
+section nav {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    align-self: center;
+}
+
+section a {
+    color: var(--primarydark-bg);
+    border-bottom: 4px solid var(--secondary);
+    padding: 3px 5px;
+    align-self: flex-end;
+}
+
+/*Media Query*/
+
+@media screen and (max-width: 1120px) {
+    main section h1 {
+        font-size: 4vw;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    
+/*Header screen adjustments*/
+    
+    header {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+    }
+
+    header h1 {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 10px var(--border-margin);
+    }
+
+    header a {
+        border: 0;
+    }
+
+    header h1::before {
+        display: none;
+    }
+  
+/*<main> screen adjustments*/
+    
+    main section {
+        display: block;
+        height: auto;
+    }
+
+    main section > * { 
+        width: 100%;
+        margin-bottom: calc(var(--Main-margin)/2);
+    }
+
+    .text-right {
+        text-align: left;
+        width: auto;
+    }
+
+    main section h1 {
+        font-size: 45px;
+    }
+
+    section h1 {
+        margin-top: calc(var(--Main-margin)/2);
+    }
+
+/*Work screen adjustments*/
+    
+    .pjname {
+        position: relative;
+        bottom: -2px;
+    }
+
+    .pjname h3 {
+        font-size: min(25px, 4vw);
+    }
+
+    .pjname p {
+        font-size: min(12px, 2vw);
+    }
+
+    .container {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    [class*="box"] {
+        height: 15vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+
+    .box-one {
+        height: 40vw;
+    }
+  
+/*Contact Me screen adjustments*/
+    
+    section nav { 
+        flex-flow: row wrap; 
+        justify-content: left;
+    }
