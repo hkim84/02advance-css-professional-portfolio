@@ -127,12 +127,14 @@ main section h2 {
     color: var(--secondary);
 }
 
+main section p {
+    font-size: 20px;
+}
 /*Grid*/
 
 [class*="box"] {
     position: relative; 
-    margin: 5px;
-    border: 5px solid var(--primary-main);
+    margin: 2px;
 }
 
 .bg { 
@@ -151,7 +153,7 @@ main section h2 {
     opacity: 0;
 }
 
-.pjname {
+.ph {
     z-index: 2;
     position: absolute;
     background-color: var(--primary-main);
@@ -160,15 +162,16 @@ main section h2 {
     padding: 8px;
 }
 
-.pjname h3 {
+.ph h3 {
     padding: 5px 0;
     color: var(--primarydark-bg);
     font-size: 25px;
 }
 
-.pjname p {
+.ph p {
     color: var(--primarydark-bg);
-    font-size: 12px;
+    font-size: 30px;
+    font-weight: bolder;
 }
 
 .box1 {
@@ -180,36 +183,42 @@ main section h2 {
 .box2 {
     grid-area: box2;
     background-image: url('..//Photos/application\ where\ is\ it.jpg');
-    background-size: cover;
+    background-size: center;
 }
 
 .box3 {
     grid-area: box3;
     background-image: url('..//Photos/application\ where\ is\ it.jpg');
-    background-size: cover;
+    background-size: center;
 }
 
 .box4 {
     grid-area: box4;
     background-image: url('../Photos/application\ where\ is\ it.jpg');
-    background-size: cover;
+    background-size: center;
 }
 
 .box5 {
     grid-area: box5;
     background-image: url('../Photos/application\ where\ is\ it.jpg');
-    background-size: cover;
+    background-size: center;
+}
+
+.box6 {
+    grid-area: box6;
+    background-image: url('../Photos/application\ where\ is\ it.jpg');
+    background-size: center;
 }
 
 .container {
-    height: 80vh;
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 5fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
-      "box1 box1"
-      "box2 box3"
-      "box4 box5";
+      "box1 box2"
+      "box3 box4"
+      "box5 box6";
 }
 
 /*section nav*/
@@ -260,7 +269,7 @@ section a {
         display: flex;
         flex-direction: column;
         text-align: center;
-        margin: 10px var(--border-margin);
+        margin: 15px var(--border-margin);
     }
 
     header a {
@@ -283,7 +292,7 @@ section a {
         margin-bottom: calc(var(--Main-margin)/2);
     }
 
-    .text-right {
+    .rttext {
         text-align: left;
         width: auto;
     }
@@ -298,17 +307,20 @@ section a {
 
 /*Work screen adjustments*/
     
-    .pjname {
+    .ph {
         position: relative;
         bottom: -2px;
     }
 
-    .pjname h3 {
+    .ph h3 {
         font-size: min(25px, 4vw);
     }
 
-    .pjname p {
+    .ph p {
         font-size: min(12px, 2vw);
+        font-style: italic;
+        font-weight: bolder;
+        color: var(--secondary);
     }
 
     .container {
@@ -318,14 +330,14 @@ section a {
     }
 
     [class*="box"] {
-        height: 15vw;
+        height: 60vw;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-end;
     }
 
-    .box-one {
+    .box1 {
         height: 40vw;
     }
   
